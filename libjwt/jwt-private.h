@@ -8,7 +8,11 @@
 #ifndef JWT_PRIVATE_H
 #define JWT_PRIVATE_H
 
+#ifndef CJSON
 #include <jansson.h>
+#else
+#include "cJSON.h"
+#endif
 
 struct jwt {
 	jwt_alg_t alg;
